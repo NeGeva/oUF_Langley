@@ -3,8 +3,12 @@ local ADDON_NAME, ns = ...
 
 ns.FCS = {}
 
-local mediaFolder = "Interface\\AddOns\\LangleyUI\\oUF_Langley\\FCS\\media\\"
-mediaFolder = mediaFolder or "Interface\\AddOns\\oUF_Langley\\FCS\\media\\"
+local mediaFolder
+if IsAddOnLoaded("LangleyUI") then
+	mediaFolder = "Interface\\AddOns\\LangleyUI\\oUF_Langley\\FCS\\media\\"
+else
+	mediaFolder = "Interface\\AddOns\\oUF_Langley\\FCS\\media\\"
+end
 
 ns.FCS = {
 	["Color"] = {

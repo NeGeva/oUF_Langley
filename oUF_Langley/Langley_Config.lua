@@ -11,8 +11,6 @@ ns.Tex = {}
 ns.Cfg = {}
 ns.Lib = {}
 
-local mediaFolder = "Interface\\AddOns\\LangleyUI\\oUF_Langley\\media\\"
-mediaFolder = mediaFolder or "Interface\\AddOns\\oUF_Langley\\media\\"
 local U = {
 
 --- ----------------------------------
@@ -152,11 +150,14 @@ local U = {
 
 }
 
+local mediaFolder
 if IsAddOnLoaded("LangleyUI") then
+	mediaFolder = "Interface\\AddOns\\LangleyUI\\oUF_Langley\\media\\"
 	local T, C, L = unpack(select(2, ...))
 	ns.Cfg = U
 	--ns.Cfg = C.UnitFrame
 else
+	mediaFolder = "Interface\\AddOns\\oUF_Langley\\media\\"
 	ns.Cfg = U
 end
 
@@ -229,7 +230,7 @@ ns.Tex = {
 		["Button2"] = mediaFolder.."Party_Button2",
 	},
 	["Font"] = {
-		["Name"] = mediaFolder.."Zfull-GB.ttf" or mediaFolder.."rr_basic05.ttf",
+		["Name"] = mediaFolder.."rr_basic05.ttf",	--mediaFolder.."Zfull-GB.ttf"	--mediaFolder.."rr_basic05.ttf"
 		["Number"] = mediaFolder.."rr_basic05.ttf",
 		["Percent"] = mediaFolder.."rr_basic05.ttf",
 		["Square"] = mediaFolder.."auras.ttf",
