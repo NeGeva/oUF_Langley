@@ -230,7 +230,7 @@ ns.Tex = {
 		["Button2"] = mediaFolder.."Party_Button2",
 	},
 	["Font"] = {
-		["Name"] = mediaFolder.."rr_basic05.ttf",	--mediaFolder.."Zfull-GB.ttf"	--mediaFolder.."rr_basic05.ttf"
+		["Name"] = mediaFolder.."Zfull-GB.ttf",	--Zfull-GB.ttf	--rr_basic05.ttf
 		["Number"] = mediaFolder.."rr_basic05.ttf",
 		["Percent"] = mediaFolder.."rr_basic05.ttf",
 		["Square"] = mediaFolder.."auras.ttf",
