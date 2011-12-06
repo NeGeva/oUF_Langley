@@ -630,6 +630,8 @@ if ns.Cfg.Raid.Switch.ShowRaid then
 			visible_raid = "party,raid"
 		elseif ns.Cfg.Raid.Switch.ShowRaidInSolo then
 			visible_raid = "raid,solo"
+		else
+			visible_raid = "raid"
 		end
 	end
 	oUF:RegisterStyle("oUF_LangleyRaid", CreateRaidStyle)
@@ -638,7 +640,7 @@ if ns.Cfg.Raid.Switch.ShowRaid then
 		'showRaid', true,
 		'showParty', true,
 		'showPlayer', true,
-		'showSolo', true,
+		'showSolo', ns.Cfg.Raid.Switch.ShowRaidInSolo,
 		'sortMethod', 'INDEX',	--'INDEX','NAME',
 		'groupFilter', '1,2,3,4,5',
 		'groupingOrder', '1,2,3,4,5',
