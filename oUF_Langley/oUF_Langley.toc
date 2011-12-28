@@ -1,5 +1,5 @@
-## Interface: 40200
-## Title: oUF_Langley
+## Interface: 40300
+## Title: oUF_|cffF23022Langley|r
 ## Notes: An oUF layout
 ## Credits to: Dawn, Tukz, Shestak, Haste, Roth, P3lim, Monolit, AlleyKat.
 ## Version: 

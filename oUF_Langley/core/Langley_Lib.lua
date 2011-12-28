@@ -670,7 +670,7 @@ ns.Lib.gen_hpstrings = function(f,unit)
 
 		-->Value<--
 		hp_value:SetJustifyH("LEFT")
-		hp_value:SetPoint("TOPLEFT", f.Health, "BOTTOMLEFT", 0, -7)
+		hp_value:SetPoint("TOPLEFT", f.Health, "BOTTOMLEFT", 0, -6)
 		hp_value.frequentUpdates = 0.1
 		
 		--hp_PERvalue:SetPoint("TOP", f.Health, "BOTTOM", 0,-1)
@@ -680,7 +680,8 @@ ns.Lib.gen_hpstrings = function(f,unit)
 		
 	elseif f.mystyle == "target" then
 		-->Info<--
-		info:SetPoint("BOTTOMLEFT", f.Health, "TOPRIGHT", 2,2)
+		info:SetJustifyH("RIGHT")
+		info:SetPoint("BOTTOMLEFT", f.Health, "TOPRIGHT", 2,3)
 		-->Name<--
 		name:SetJustifyH("RIGHT")
 		name:SetPoint("BOTTOMRIGHT", f.Health, "TOPRIGHT", 0,3)
@@ -689,7 +690,7 @@ ns.Lib.gen_hpstrings = function(f,unit)
 		
 		-->Value<--
 		hp_value:SetJustifyH("LEFT")
-		hp_value:SetPoint("TOPRIGHT", f.Health, "BOTTOMRIGHT", 13, -7)
+		hp_value:SetPoint("TOPRIGHT", f.Health, "BOTTOMRIGHT", 13, -6)
 		hp_value.frequentUpdates = 0.1
 		
 		f:Tag(info, "|cffF27F11".."[negeva_info]")
@@ -779,7 +780,7 @@ ns.Lib.gen_ppstrings = function(f, unit)
 			f:Tag(druidpp,'[druidPower]')
 		end
 		pp:SetJustifyH("LEFT")
-		pp:SetPoint("TOPLEFT", f.Power, "BOTTOMLEFT", 0, -7)
+		pp:SetPoint("TOPLEFT", f.Power, "BOTTOMLEFT", 0, -6)
 		pp.frequentUpdates = 0.1
 		f:Tag(pp,'[negeva_pp]')
 	elseif f.mystyle == "target" then
@@ -1402,7 +1403,7 @@ ns.Lib.TotemBars = function(self)
 			self.TotemBar[i] = CreateFrame("StatusBar", nil, TotemBar)
 			self.TotemBar[i]:SetHeight(TotemBar:GetHeight())
 			self.TotemBar[i]:SetWidth((TotemBar:GetWidth()-3)/4)
-			self.TotemBar[i]:SetStatusBarTexture(cfg.Line)
+			self.TotemBar[i]:SetStatusBarTexture(ns.Tex.Bar.Bar)
 			--self.TotemBar[i]:SetFrameLevel(11)
 			--self.TotemBar[i]:SetOrientation("VERTICAL")
 			if (i == 1) then
